@@ -6,6 +6,7 @@ class Jury
 	end
 
 	def add_member(member)
+		puts "#{member} is now part of the jury"
 		@members << member
 	end
 
@@ -30,7 +31,9 @@ class Jury
 	end
 
 	def announce_winner(final_votes)
-		final_votes.max_by{|finalist, votes| votes}.first
+		winner = final_votes.max_by{|finalist, votes| votes}.first
+		puts "#{winner} has won!"
+		return winner
 	end
 
 end

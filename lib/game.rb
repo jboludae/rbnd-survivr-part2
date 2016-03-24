@@ -11,7 +11,7 @@ class Game
   end
 
   def immunity_challenge
-    @tribes.first
+    @tribes.sample
   end
 
   def clear_tribes
@@ -24,7 +24,9 @@ class Game
   end
 
   def individual_immunity_challenge
-    @tribes.sample.members.sample
+    immune = @tribes.sample.members.sample
+    puts "#{immune} is immune"
+    return immune
   end
 
 end
