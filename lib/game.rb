@@ -25,7 +25,7 @@ class Game
 
   def individual_immunity_challenge
     immune = @tribes.sample.members.sample
-    puts "#{immune} is immune"
+    puts "#{immune} is immune".yellow
     return immune
   end
 
